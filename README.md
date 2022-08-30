@@ -1,2 +1,2 @@
 # Website.
-I did this website for one of my homework from my school. I was just using HTML and CSS.
+I did this website and i was just using HTML5 and CSS3.
