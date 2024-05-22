@@ -11,16 +11,10 @@ body{
     background: #fff;;
     font-family: sans-serif;
     font-size: 16px;
+    margin: 0px auto;
 }
 
 
-.contenedor{
-  width: 100%;
-  max-width: 1200px;
-  margin: 0px auto;
-
-
-}
 
 header{
   width: 100%;
@@ -53,7 +47,6 @@ header .header-bar button{
   border: none;
   padding: 5px 5px;
   margin: 10px;
-  margin-right: 100px;
   background-image: url("/image/240_F_197135414_Hiy7mFFJQUBDoNm33L7i9sNUUtJNllXs.jpg");
   background-size: 30px;
   background-repeat: no-repeat;
@@ -61,10 +54,13 @@ header .header-bar button{
   
 }
 
-
+nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 nav .logo{
-  float: left;
   margin-top: 20px;
   cursor: pointer;
   
@@ -72,7 +68,7 @@ nav .logo{
 
 nav .logo img{
   width: 40%;
-  margin-right: 80px;
+  /* margin-right: 80px; */
 
 }
 
@@ -95,7 +91,6 @@ nav ul{
 nav li{
   float: left;
   line-height: 100px;
-  margin-left: 5px;
   text-decoration: none;
 }
 
@@ -182,15 +177,13 @@ article{
  
 }
 
-.header-paragraph h2{
-  float: left;
+.header-paragraph .h2-title{
   line-height: 20px;
   margin-bottom: 20px;
 
 }
 
 .header-paragraph .para{
-  float: right;
   line-height: 20px;
   margin-bottom: 20px;
 
@@ -209,15 +202,19 @@ article{
   padding: 5px;
   border: none;
   background:#00b5da;
-  margin-bottom: 20px;
+  margin: 20px auto;
   overflow: hidden;
 }
 
-.img-medium{
-  float: left;
-  width: 28%;
-  height: 30%;
-  max-width: 1200px;
+
+.cards{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card{
+  width: 180px;
   margin: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -227,36 +224,46 @@ article{
   
 }
 
-.img-medium img{
+.card img{
   width: 100%;
   padding: 10px;
   object-fit: cover;
 
 }
 
-.img-medium .title{
+.card .title{
   color: #00b5da;
   margin-bottom: 20px;
 }
 
-.img-medium:hover{
+.card:hover{
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+
+}
+
+.cardCard{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+  
+}
+
+
+.medium-down{
+
+  margin:20px;
+  text-align: center;
+}
+
+.medium-down:hover{
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
 
 }
 
 
-.medium-down{
-  width: 20%;
-  max-width: 1200px;
-  float: left;
-  margin:20px 0;
-  
-}
-
-
-
 .img-ven img{
-  width: 80%;
+  width: 100%;
 }
 
  .paraTitle {
@@ -326,6 +333,7 @@ footer{
   max-width: 1200px;
   margin: 20px auto;
   overflow: hidden;
+  
 
 }
 
@@ -343,10 +351,10 @@ footer .site-footer__links a:hover{
 
 
 footer .icons{
-  float: right;
+  float: left;
   color:#ee5b32;
   background-color: #fff;
-  margin: 40px 0px;
+  margin: 10px auto;
   border: none;
   font-size: 40px;
   line-height: 30px;
@@ -357,4 +365,207 @@ footer .icons{
 
 }
 
+/* Mobile*/
+@media (min-width: 320px) and (max-width:351px){
+  
+  .header-bar {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  
+  }
 
+  nav .logo{
+    display: flex;
+    justify-content: center;
+  }
+
+  nav .logo img{
+    display: flex;
+    justify-items: center;
+  }
+
+  nav ul li a{
+    font-size: 10px;
+
+  }
+
+  .header-paragraph .h2-title{
+    text-align: center;
+  }
+
+  .header-paragraph .para a{
+    font-size: medium;
+    display:flex ;
+    justify-content: center;
+  }
+
+  .images-cards .card{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards .card{
+    width: fit-content;
+  }
+
+  .cardCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+
+  .cardCard .medium-down{
+    width: fit-content;
+    text-align: center;
+    
+    
+  }
+
+  .cardCard .medium-down .paraTitle{
+    font-size: 12px;
+   
+  }
+
+}
+
+@media (min-width:351px) and (max-width:800px) {
+
+  .header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+   }
+
+   nav .logo{
+    display: flex;
+    justify-content: center;
+  }
+
+   nav ul li a{
+    font-size: 14px;
+
+  }
+
+  .header-paragraph .h2-title{
+    text-align: center;
+  }
+
+  .header-paragraph .para a{
+    font-size: medium;
+    display:flex ;
+    justify-content: center;
+  }
+
+  .images-cards .card{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards .card{
+    width: fit-content;
+  }
+
+  .cardCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+
+  .cardCard .medium-down{
+    width: fit-content;
+    text-align: center;
+    
+    
+  }
+
+  .cardCard .medium-down .paraTitle{
+    font-size: 12px;
+   
+  }
+
+}
+
+@media (min-width:801px){
+  .header-bar {
+    display: flex;
+    justify-content: end;
+   
+   }
+
+   nav{
+   width: 60%;
+   margin: 0px auto;
+   display: flex;
+   flex-direction: row;
+   }
+
+   nav .logo img{
+    width: 200px;
+  }
+
+   nav ul li a{
+    font-size: 16px;
+
+  }
+
+}
+
+@media (min-width:801px){
+  .header-bar {
+    display: flex;
+    justify-content: end;
+   
+   }
+
+   nav{
+   width: 60%;
+   margin: 0px auto;
+   display: flex;
+   flex-direction: row;
+   
+   }
+
+   nav .log{
+    display: flex;
+    justify-content: start;
+   }
+
+   nav .logo img{
+    width: 200px;
+  }
+
+   nav ul li a{
+    font-size: 21px;
+
+  }
+
+}
+
+@media (min-width:1097px) {
+  .textIcons{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icons{
+    text-align: start;
+  }
+
+
+  
+}
