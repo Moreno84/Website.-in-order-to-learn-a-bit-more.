@@ -2,4 +2,4 @@ Whether you want to have a look at this project, you can just press this URL lin
 
 I just did this project in HTML and CSS3. 
 
-If you are interested in knowing abut me more, Please just ask me.
+If you are interested in knowing about me more, Please just ask me.
